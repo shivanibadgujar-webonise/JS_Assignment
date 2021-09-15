@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Ques 2</title>
+    <style type="text/css">
+        body {
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="input_container">
+
+            <label for="">Input 1</label>
+            <input type="text" id="Input1" /><br><br>
+            <label for="">Input 2</label>
+            <input type="text" id="Input2" /><br><br>
+
+        </div>
+
+        <div class="button_container">
+
+
+            <input type="button" onClick="AdditionBy()" Value="Adition" />
+            <input type="button" onClick="SubstractionBy()" Value="Substraction" />
+
+        </div>
+
+    </form>
+    <p>
+        <span id="result"></span>
+    </p>
+
+    <script>
+        function AdditionBy() {
+            let num1 = document.getElementById("Input1").value;
+            let num2 = document.getElementById("Input2").value;
+            let sum = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").innerHTML = "The sum is :" + sum;
+        }
+
+        function SubstractionBy() {
+            let num1 = document.getElementById("Input1").value;
+            let num2 = document.getElementById("Input2").value;
+            let diff = num1 - num2;
+            document.getElementById("result").innerHTML = "The sum is : " + diff;
+        }
+
+
+    </script>
+</body>
+
+</html>

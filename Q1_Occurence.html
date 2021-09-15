@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques_1</title>
+</head>
+
+
+<body>
+
+    <h1>1. Write a JavaScript code that will prompt user to enter a list of comma separated integers and returns
+        the total occurrences of each number in an order(ascending/descending).</h1>
+    <script>
+        const unsorted_arr = [2, 5, 7, 8, 5, 3, 5, 7, 8, 5, 3, 4, 2, 4, 2, 1, 6, 8, 6];
+        const getFrequency = (array) => {
+            const sorted_arr = {};
+            array.forEach(item => {
+                if (sorted_arr[item]) {
+                    sorted_arr[item]++;
+                } else {
+                    sorted_arr[item] = 1;
+                }
+            });
+            return sorted_arr;
+        };
+        console.log(getFrequency(unsorted_arr));
+
+    </script>
+</body>
+
+</html>
